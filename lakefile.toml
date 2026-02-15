@@ -1,0 +1,7 @@
+name = "nix-flakes-lean"
+version = "0.1.0"
+defaultTargets = ["nix-flakes-lean"]
+
+[[lean_exe]]
+name = "nix-flakes-lean"
+root = "Main"

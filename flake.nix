@@ -1,5 +1,5 @@
 {
-  description = "duckdb flake sample";
+  description = "lean flake sample";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -16,9 +16,10 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             # language
+            # lake (lean package manager) is included lean4 nixpkgs.
             lean4
-            # package manager
-            lake
+            # lean version manager
+            elan
           ];
         };
       }
